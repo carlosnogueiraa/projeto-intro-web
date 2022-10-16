@@ -4,43 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", user-scalable="no">
+    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&display=swap" rel="stylesheet">
 
-    <title>Projeto de Intro a Web</title>
+    <title>Ex-jogadores da NBA</title>
 </head>
 
-<header>
-    <img class="logo" src="./images/logo-nba.svg" alt="logo-nba">
-    <button class="home">Início</button>
-</header>
-
 <body>
-    <main>
-        <h1>Lista de jogadores da NBA</h1>
-        <section class="search-container">
-            <div id="search">
-                <input placeholder="Pesquisar" type="">
-                <button class="searchbutton">Buscar</button>
-            </div>
-        </section>
+    <header>
+        <div>
+            <img class="logo" src="./images/logo-nba.svg" alt="logo-nba" id="imgHeader">
+        </div>
+        <h1>Ex-jogadores da NBA</h1>
+        <button onclick="refresh()" class="home">Início</button>
+    </header>
 
-        <section class="main-container">
-            <div>
-                <article>
-                    
-                </article>
-            </div>
-        </section>
-            
-            
+    <main>
+        <div class="search-container">
+            <input id="myInput" placeholder="Pesquisar" type="text">
+            <button id="myButton" onclick="searchItem()" class="searchbutton">Buscar</button>
+        </div>
+
+        <div id="main-page" class="main-container"></div>
     </main>
 
-    <footer>Footer</footer>
+    <footer>
+        <h2>Carlos Nogueira</h2>
+        <a href="https://github.com/carlosnogueiraa/">
+            <img src="./images/GitHub-Mark-Light-32px.png"></img>
+        </a>
+
+    </footer>
 </body>
 
 </html>

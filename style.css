@@ -2,71 +2,86 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #253b73;
+    min-width: 380px;
+}
 
 header {
-    background-color: black;
+    background-color: #0f131d;
     width: 100%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2%;
+    color: white;
 }
 
-header > img {
-    width: 6%;
+#imgHeader {
+    width: 100px;
+    height: auto;
 }
-
 
 .home {
-    height: 4vh;
+    width: 100px;
+    height: 3em;
     text-align: center;
-    width: 10vw;
+}
+
+button {
+    color: white;
+    background-color: #093f9a;
+    border-radius: 8px;
+    border: solid white 1px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 90%;
+}
+
+button:hover {
+    opacity: 100%;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-}
-
-.search-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90vw;
-    height: 20vh;
-    background-color: red;
-}
-
-#search {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    height: 7vh;
+    margin-top: 8px;
 }
 
 .searchbutton {
     height: 3em;
-    width: 8vw;
-    margin: 20px;
-    text-align: center;
-    border-radius: 8px;
+    width: 100px;
 }
 
 input {
+    font-size: 16px;
     text-align: center;
     height: 3em;
-    width: 20em;
+    width: 250px;
     border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: 1s;
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
     margin: 20px;
@@ -74,18 +89,111 @@ h1 {
 
 .main-container {
     display: flex;
-    justify-content: center;
-    width: 90vw;
+    align-items: center;
+    width: 100%;
     height: 100%;
-    flex-direction: column-reverse;
-    margin: 20px;
+    flex-direction: column;
+    margin-bottom: 117px;
+    /* background-image: linear-gradient(70deg, black, rgba(9, 63, 154, 0.5), black); */
+}
+
+section {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 205px;
+    width: 750px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+    #section-main:hover {
+        background-image:linear-gradient(0deg, rgba(30, 37, 55, 0.4), transparent);
+    }
+
+@media screen and (max-width: 600px) {
+
+    section {
+        width: 350px;
+    }
+    .search-container {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    section {
+        width: 550px;
+    }
+
+    .search-container {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    section {
+        width: 750px;
+    }
+}
+
+.imgRes {
+    width: 120px;
+    height: 140px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#img-player {
+    width: 120px;
+    height: 140px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+ul {
+    width: 60%;
+    margin: auto 10px;
+    list-style: none;
+}
+
+li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
-    bottom: 0;
-    background-color: black;
+    display: flex;
+    background-color: #0f131d;
     color: white;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     height: 10vh;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    min-width: 380px;
 }
